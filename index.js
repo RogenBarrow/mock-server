@@ -11,7 +11,14 @@ app.listen(port, () => {
 });
 
 app.post('/postxml', (req, res) => {
-    //const xmlBody = format(req.body);
     res.status(200).send('OK')
-    console.log(req.body);
+    console.log(Date(), req.body);
 });
+
+app.post('/ping', (req, res) => {
+    res.status(200).send('PONG')
+});
+
+app.get('/ping', (req, res) => {
+    res.status(200).send('PONG')
+})
