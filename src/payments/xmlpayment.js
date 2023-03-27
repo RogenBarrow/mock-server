@@ -1,5 +1,6 @@
-const xmlPaymentType1 = 
-`<?xml version="1.0" encoding="UTF-8"?>
+const axios = require("axios");
+
+const data = `<?xml version="1.0" encoding="UTF-8"?>
 <request>
 <reqtype>1</reqtype>
 <mode> CHK</mode>
@@ -57,6 +58,20 @@ const xmlPaymentType1 =
 <cbcode>01</cbcode>
 <memo>SPRWIRE001</memo>
 </request>
-`
+`;
+const config = {
+  headers: { "Content-Type": "application/xml" },
+};
 
-module.exports = xmlPaymentType1;
+const sendXmlPayment = () => {
+  axios.post("http://localhost:5056/listen", { data }, config);
+  try {
+    (function (response) {
+      console.log(response);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+module.exports = sendXmlPayment;
