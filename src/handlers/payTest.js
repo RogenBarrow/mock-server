@@ -10,7 +10,8 @@ const parser = new XMLParser({ ignoreDeclaration: true });
 const config = { headers: { "Content-Type": "application/xml" } };
 
 // Mock Server Configuration
-const { mockServer } = require("../config/configuration");
+const { alchemyBaseUrl } = require("../config/configuration");
+const { post } = require("../router");
 
 const payTest = async (req, res) => {
   const currentDate = new Date().toLocaleString();
@@ -28,7 +29,13 @@ const payTest = async (req, res) => {
     const xmlData = await fs.readFile(xmlFilePath, { encoding: "utf8" });
 
     // Post the XML data to the server
-    await axios.post(`${mockServer}/listen`, { data: xmlData }, config);
+    console.log(alchemyBaseUrl);
+    const result = await axios.post(
+      `${alchemyBaseUrl}/request/reqtype/5`,
+      { data: xmlData },
+      config
+    );
+    console.log("Response - ", result.data);
 
     // Respond to Server
     console.log("PAYTEST -", currentDate, `payType${type}.xml`, "OK");
