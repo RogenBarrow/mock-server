@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <request>
   <reqtype>1</reqtype>
-  <mode> CHK</mode>
-    <date>20070323</date>
+  <mode>CHK</mode>
+    <date>20230414</date>
   <tranid>0001234567</tranid>
   <fromacctinfo>
   <bank/>
-  <branch>328</branch>
-  <account>8811016933</account>
-  <currency>USD</currency>
-  <name>JMCAUTOSUPPLIES LTD</name>
+  <branch>00036</branch>
+  <account>00002094282517</account>
+  <currency>JMD</currency>
+  <name>DELANO ANDRE PARCHMENT</name>
   </fromacctinfo>
   <traninfo>
-  <amount>135000000</amount>
-  <currency>JPY</currency>
+  <amount>1000</amount>
+  <currency>JMD</currency>
   </traninfo>
   <beneinfo>
-  <account>3288811600265TTD</account>
+  <account>00002094282517JMD</account>
   <name>DON JOSEPH RAMGOOLAM</name>
   <address>LAST LAP ROAD</address>
   <city>GREEN STREET</city>
@@ -35,26 +35,24 @@
   <biccode/>
   <abanumber/>
   <abanetwork/>
-  <name>RESONABANK</name>
+  <name>JN BANK LIMITED</name>
   <address>KOMYOIKE BRANCH</address>
-  <city>OSAKA</city>
-  <country>JAPAN</country>
+  <city>KINGSTON</city>
+  <country>JAMAICA</country>
   </interbankinfo>
   <swiftinfo>
   <charges>SHA</charges>
   <priority>N</priority>
-  </swiftinfo>
+ </swiftinfo>
   <charge1>
      <name>SERVICE FEE</name>
      <amount>1500</amount>
      <currency>USD</currency>
    </charge1>
-  <rate1></rate1>                                      
-  <rate2></rate2>                                         
-  <insrate></insrate>                                     
+  <rate1></rate1>
+  <rate2></rate2>
+  <insrate></insrate>
   <origid></origid>
   <cbcode>01</cbcode>
   <memo>SPRWIRE001</memo>
   </request>
-  
-  
