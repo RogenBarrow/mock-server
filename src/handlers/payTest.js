@@ -30,7 +30,7 @@ const payTest = async (req, res) => {
 
     // Post the XML data to the server
     console.log(alchemyBaseUrl);
-    const result = await axios.post(`${alchemyBaseUrl}/request/reqtype/2`, xmlData, config);
+    const result = await axios.post(`${alchemyBaseUrl}/request/reqtype/2`, { xmlData }, config);
     console.log("Response - ", result.data);
 
     // Respond to Server
