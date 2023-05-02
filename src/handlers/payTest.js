@@ -9,7 +9,7 @@ const parser = new XMLParser({ ignoreDeclaration: true });
 // Axios Configuration
 const config = {
   headers: {
-    "Content-Type": "application/xml",
+    "Content-Type": "text/xml",
   },
 };
 
