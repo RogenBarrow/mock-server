@@ -10,7 +10,6 @@ const parser = new XMLParser({ ignoreDeclaration: true });
 const config = {
   headers: {
     "Content-Type": "application/xml",
-    Accept: "application / xml",
   },
 };
 
