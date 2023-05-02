@@ -7,7 +7,12 @@ const XMLParser = require("fast-xml-parser").XMLParser;
 const parser = new XMLParser({ ignoreDeclaration: true });
 
 // Axios Configuration
-const config = { headers: { "Content-Type": "application/xml" } };
+const config = {
+  headers: {
+    "Content-Type": "application/xml",
+    Accept: "application / xml",
+  },
+};
 
 // Mock Server Configuration
 const { alchemyBaseUrl } = require("../config/configuration");
