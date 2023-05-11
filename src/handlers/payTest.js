@@ -8,12 +8,7 @@ const builder = new XMLBuilder();
 const parser = new XMLParser({ ignoreDeclaration: true });
 
 // Axios Configuration
-const config = {
-  headers: {
-    "Content-Type": "application/xml",
-    Accept: "*/*",
-  },
-};
+const config = { headers: { "Content-Type": "text/xml", Accept: "*/*" } };
 
 // Mock Server Configuration
 const { alchemyBaseUrl } = require("../config/configuration");
@@ -51,7 +46,11 @@ const payTest = async (req, res) => {
 
     // Post the XML data to the server
     console.log(alchemyBaseUrl);
-    const result = await axios.post(`${alchemyBaseUrl}/request/reqtype/2`, { updatedXML }, config);
+    const result = await axios.post(
+      `${alchemyBaseUrl}/request/reqtype/5`,
+      { data: xmlData },
+      config
+    );
     console.log("Response - ", result.data);
 
     // Respond to Server
