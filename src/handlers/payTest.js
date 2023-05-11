@@ -1,13 +1,19 @@
 const path = require("node:path");
 const fs = require("node:fs/promises");
 const axios = require("axios");
-const XMLParser = require("fast-xml-parser").XMLParser;
+const { XMLParser, XMLBuilder } = require("fast-xml-parser");
+const builder = new XMLBuilder();
 
 // XML Parser Config
 const parser = new XMLParser({ ignoreDeclaration: true });
 
 // Axios Configuration
-const config = { headers: { "Content-Type": "application/xml" } };
+const config = {
+  headers: {
+    "Content-Type": "application/xml",
+    Accept: "*/*",
+  },
+};
 
 // Mock Server Configuration
 const { alchemyBaseUrl } = require("../config/configuration");
@@ -18,6 +24,7 @@ const payTest = async (req, res) => {
 
   let type;
   type = req.body.type;
+  const id = req.body.tranid;
   if (!type) type = "1";
 
   try {
@@ -25,16 +32,26 @@ const payTest = async (req, res) => {
     // XML File path
     const xmlFilePath = path.join(__dirname, `../paymentsinfo/payType${type}.xml`);
 
-    // read XML Data into variable
+    // const options = {
+    //   ignoreAttributes: false,
+    //   attributeNamePrefix: "",
+    // };
+
+    // read XML Data into variable and convert to JSON and back to XML
     const xmlData = await fs.readFile(xmlFilePath, { encoding: "utf8" });
+    //console.log(xmlData);
+    const convertedData = parser.parse(xmlData);
+    console.log(convertedData);
+    // Update the value of tranid
+    convertedData.request.tranid = id;
+
+    // Convert the updated JSON object back to XML
+    const updatedXML = builder.build(convertedData);
+    console.log("updated:", updatedXML);
 
     // Post the XML data to the server
     console.log(alchemyBaseUrl);
-    const result = await axios.post(
-      `${alchemyBaseUrl}/request/reqtype/5`,
-      { data: xmlData },
-      config
-    );
+    const result = await axios.post(`${alchemyBaseUrl}/request/reqtype/2`, { updatedXML }, config);
     console.log("Response - ", result.data);
 
     // Respond to Server
