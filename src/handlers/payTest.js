@@ -44,6 +44,9 @@ const payTest = async (req, res) => {
     const updatedXML = `<?xml version="1.0" encoding="UTF-8"?>g${builder.build(convertedData)}`;
     console.log("updated:", updatedXML);
 
+    // Remove updatedXML property from the request object
+    delete req.body.updatedXML;
+
     // Post the XML data to the server
     console.log(alchemyBaseUrl);
     const result = await axios.post(`${alchemyBaseUrl}/request/reqtype/1`, { updatedXML }, config);
