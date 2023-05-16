@@ -34,21 +34,21 @@ const payTest = async (req, res) => {
 
     // read XML Data into variable and convert to JSON and back to XML
     const xmlData = await fs.readFile(xmlFilePath, { encoding: "utf8" });
-    //console.log(xmlData);
+    console.log(xmlData);
     const convertedData = parser.parse(xmlData);
     console.log(convertedData);
     // Update the value of tranid
     convertedData.request.tranid = id;
 
     // Convert the updated JSON object back to XML
-    const updatedXML = builder.build(convertedData);
+    const updatedXML = `<?xml version="1.0" encoding="UTF-8"?>\n${builder.build(convertedData)}`;
     console.log("updated:", updatedXML);
 
     // Post the XML data to the server
     console.log(alchemyBaseUrl);
     const result = await axios.post(
       `${alchemyBaseUrl}/request/reqtype/1`,
-      { data: xmlData },
+      { data: updatedXML },
       config
     );
     console.log("Response - ", result.data);
