@@ -41,7 +41,7 @@ const payTest = async (req, res) => {
     convertedData.request.tranid = id;
 
     // Convert the updated JSON object back to XML
-    const updatedXML = `<?xml version="1.0" encoding="UTF-8"?>\n${builder.build(convertedData)}`;
+    const updatedXML = `<?xml version="1.0" encoding="UTF-8"?>${builder.build(convertedData)}`;
     console.log("updated:", updatedXML);
 
     // Post the XML data to the server
