@@ -1,117 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
- <request>
- <reqtype>1</reqtype>
- <date>20221026</date>
- <tranid> 1000 </tranid>
- <fromacctinfo>
- <branch></branch>
- <account>00000033457521</account>
- <currency>JMD</currency>
- <name>WENDY GABAY</name>
- </fromacctinfo>
- <traninfo>
- <amount>40000</amount>
- <currency>USD</currency>
- </traninfo>
- <beneinfo>
- <account>ME25505000012345678951</account>
- <name>test &apos; internal &quot; transfer</name>
- <address>Beneficiary Address</address>
- <city>Beneficiary City</city>
- <country>Beneficiary Country</country>
- </beneinfo>
- <benebankinfo>
- <biccode>BCMAMAMCBAS</biccode>
- <name>ATTIJARIWAFA BANK</name>
- </benebankinfo>
- <interbankinfo />
- <swiftinfo>
- <charges>OUR</charges>
- </swiftinfo>
- <charge1>
- <name>SWIFT FEE</name>
- <amount>000</amount>
- <percent></percent>
- <currency>USD</currency>
- <taxind>N</taxind>
- <taxappl>N</taxappl>
- </charge1>
- <charge2>
- <name>TRANSFER FEE</name>
- <amount>1500</amount>
- <percent></percent>
- <currency>USD</currency>
- <taxind>N</taxind>
- <taxappl>N</taxappl>
- </charge2>
- <charge3>
- <name>GCT</name>
- <amount>4000</amount>
- <percent></percent>
- <currency>JMD</currency>
- <taxind>N</taxind>
- <taxappl>N</taxappl>
- </charge3>
- <charge4>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge4>
- <charge5>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge5>
- <charge6>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge6>
- <charge7>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge7>
- <charge8>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge8>
- <charge9>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge9>
- <charge10>
- <name></name>
- <amount></amount>
- <percent></percent>
- <currency></currency>
- <taxind></taxind>
- <taxappl></taxappl>
- </charge10>
- <rate1>129.5000000</rate1>
- <rate2></rate2>
- <insrate></insrate>
- <compid>10CHARIDQA</compid>
- <cbcode></cbcode>
- <memo>WIREIBIS</memo>
- </request>
+<request>
+    <reqtype>1</reqtype>
+    <date>20221026</date>
+    <tranid> 1000 </tranid>
+    <fromacctinfo>
+        <branch></branch>
+        <account>00000033457521</account>
+        <currency>JMD</currency>
+        <name>WENDY GABAY</name>
+    </fromacctinfo>
+    <traninfo>
+        <amount>40000</amount>
+        <currency>USD</currency>
+    </traninfo>
+    <beneinfo>
+        <account>ME25505000012345678951</account>
+        <name>test &apos; internal &quot; transfer</name>
+        <address>Beneficiary Address</address>
+        <city>Beneficiary City</city>
+        <country>Beneficiary Country</country>
+    </beneinfo>
+    <benebankinfo>
+        <biccode>BCMAMAMCBAS</biccode>
+        <name>ATTIJARIWAFA BANK</name>
+    </benebankinfo>
+    <interbankinfo />
+    <swiftinfo>
+        <charges>OUR</charges>
+    </swiftinfo>
+    <charge1>
+        <name>SWIFT FEE</name>
+        <amount>000</amount>
+        <percent></percent>
+        <currency>USD</currency>
+        <taxind>N</taxind>
+        <taxappl>N</taxappl>
+    </charge1>
+    <charge2>
+        <name>TRANSFER FEE</name>
+        <amount>1500</amount>
+        <percent></percent>
+        <currency>USD</currency>
+        <taxind>N</taxind>
+        <taxappl>N</taxappl>
+    </charge2>
+    <charge3>
+        <name>GCT</name>
+        <amount>4000</amount>
+        <percent></percent>
+        <currency>JMD</currency>
+        <taxind>N</taxind>
+        <taxappl>N</taxappl>
+    </charge3>
+    <charge4>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge4>
+    <charge5>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge5>
+    <charge6>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge6>
+    <charge7>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge7>
+    <charge8>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge8>
+    <charge9>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge9>
+    <charge10>
+        <name></name>
+        <amount></amount>
+        <percent></percent>
+        <currency></currency>
+        <taxind></taxind>
+        <taxappl></taxappl>
+    </charge10>
+    <rate1>129.5000000</rate1>
+    <rate2></rate2>
+    <insrate></insrate>
+    <compid>10CHARIDQA</compid>
+    <cbcode></cbcode>
+    <memo>WIREIBIS</memo>
+</request>
