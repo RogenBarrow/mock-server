@@ -41,6 +41,9 @@ const payTest = async (req, res) => {
   const benAddress = req.body.benAddress;
   const benCity = req.body.benCity;
   const benCountry = req.body.benCountry;
+  //bank info
+  const bicCode = req.body.biccode;
+  const bankName = req.body.bankname;
   //charges1
   const charName1 = req.body.charName1;
   const charAmount1 = req.body.charAmount1;
@@ -110,6 +113,16 @@ const payTest = async (req, res) => {
         ...dataRequest.traninfo,
         currency: currency || dataRequest.traninfo.currency,
         amount: amount || dataRequest.traninfo.amount,
+      },
+    };
+
+    //transaction information
+    dataRequest = {
+      ...dataRequest,
+      benebankinfo: {
+        ...dataRequest.benebankinfo,
+        biccode: bicCode || dataRequest.benebankinfo.biccode,
+        name: bankName || dataRequest.benebankinfo.name,
       },
     };
 
