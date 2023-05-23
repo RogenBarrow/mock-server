@@ -33,7 +33,7 @@ const payTest = async (req, res) => {
   const branch = req.body.branch;
   const accCurency = req.body.currency;
   //transaction information
-  const currency = req.tranCurrency;
+  const currency = req.body.tranCurrency;
   const amount = req.body.tranAmount;
   //beneficiery information
   const benAccount = req.body.benAccount;
