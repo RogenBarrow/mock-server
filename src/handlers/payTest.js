@@ -246,7 +246,7 @@ const payTest = async (req, res) => {
     console.log("this is in the array: - ", msgArray);
 
     // render
-    const compiledFunction = pug.compileFile(path.join(__dirname, "./src/payments/html.pug"));
+    const compiledFunction = pug.compileFile(path.join(__dirname, "/src/payments/html.pug"));
     return res.status(200).send(compiledFunction({ msgArray }));
   } catch (err) {
     console.error("What is the error: ", err);
