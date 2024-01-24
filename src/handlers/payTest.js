@@ -65,6 +65,9 @@ const payTest = async (req, res) => {
   const charCurrency3 = req.body.charCurrency3;
   const chartaxind3 = req.body.charTaxind3;
   const chartaxappl3 = req.body.charTaxappl3;
+  //response
+  const status = req.body.status;
+  const description = req.body.description;
 
   if (!type) type = "1";
 
@@ -204,6 +207,13 @@ const payTest = async (req, res) => {
         taxind: chartaxind3 || dataRequest.charge3.chartaxind3,
         taxappl: chartaxappl3 || dataRequest.charge3.chartaxappl3,
       },
+    };
+
+    dataRequest = {
+      ...dataRequest,
+      tranid: id || dataRequest.tranid,
+      status: status || dataRequest.status,
+      description: description || dataRequest.description,
     };
 
     // convertedData.request.charge3.name = charName3;
